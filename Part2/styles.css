@@ -1,0 +1,405 @@
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #F5F3EE;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: none;
+}
+
+.header {
+  background-color: #A67B5B;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers everything horizontally */
+  padding: 10px;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  gap: 400px; /* Adds spacing between elements */
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.signup, .login {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup {
+  background-color: black;
+  color: white;
+}
+
+.login {
+  background-color: #E6E6E6;
+  color: black;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 40px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  background: url('hero.png') no-repeat center center/cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: white;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 85px;
+}
+
+.cta-button {
+  background-color: black;
+  color: white;
+  padding: 20px 32px;
+  font-size: 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.collections {
+  text-align: center;
+  margin: 80px auto;
+}
+
+.collections h2 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.collection-grid {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 32px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.collection-card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 405px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.collection-card img:hover {
+  transform: scale(1.05);
+}
+
+.collection-card p {
+  font-size: 36px;
+  font-weight: 500;
+  color: #000;
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 80px auto;
+  padding: 40px;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-text h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.about-text p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.secondary-btn {
+  background-color: #E6E6E6;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.about-section img {
+  flex: 1;
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.how-it-works {
+  text-align: center;
+  margin: 80px auto;
+}
+
+.how-it-works-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.how-it-works h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.how-card {
+  width: 45%;
+  text-align: center;
+}
+
+.how-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.how-card img:hover {
+  transform: scale(1.05);
+}
+
+.how-card p {
+  font-size: 36px;
+  font-weight: 500;
+  color: #000;
+  margin-top: 16px;
+}
+
+.testimonials {
+  text-align: center;
+  margin: 80px auto;
+}
+
+.testimonials h2 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.customer-quote {
+  width: 30%;
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+}
+
+.customer-quote p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000;
+}
+
+.customer-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.customer-avatar img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.customer-avatar span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact {
+  background: #A8B5A2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.contact h2 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.primary-btn {
+  background-color: black;
+  color: white;
+  padding: 20px 32px;
+  font-size: 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #F5F3EE;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .about-section {
+      flex-direction: column;
+      text-align: center;
+  }
+  
+  .about-section img {
+      width: 100%;
+  }
+
+  .collection-grid, .how-it-works-container, .testimonial-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .collection-card, .how-card, .customer-quote {
+      width: 90%;
+  }
+
+  .hero {
+      text-align: center;
+  }
+
+  .cta-button {
+      width: 100%;
+  }
+}
