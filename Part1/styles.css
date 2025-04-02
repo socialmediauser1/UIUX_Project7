@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', cursive;
+    border: 2px dashed hotpink;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  body {
+    background: linear-gradient(135deg, hotpink, limegreen, cyan);
+    background-size: 300% 300%;
+    animation: slow-puke 20s ease infinite;
+    overflow-x: scroll;
+    position: relative;
+  }
+  
+  #ugly-header {
+    background-color: lime;
+    border: 8px dashed magenta;
+    padding: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .toxic {
+    color: #39ff14;
+    text-shadow: 2px 2px 0 hotpink, -2px -2px 0 cyan;
+    position: relative;
+  }
+  
+  .toxic::before {
+    content: "💀 ";
+  }
+  
+  .toxic::after {
+    content: " 🔊";
+  }
+  
+  .one {
+    display: flex;
+    justify-content: right;
+    margin: 20px;
+    padding: 10px;
+    font-size: 3rem;
+  }
+  
+  .two {
+    margin: 222px 10px 5px 100px;
+    padding: 5px 20px;
+    font-size: 2.5rem;
+    float: left;
+  }
+  
+  .three {
+    margin: 100px 100px 30px 20px;
+    padding: 30px;
+    font-size: 2rem;
+    background: yellow;
+    border: 4px dotted black;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .toxic:hover {
+    transform: rotate(10deg) scale(1.2);
+    color: red;
+    background-color: black;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap-reverse;
+    background-color: chartreuse;
+    padding: 20px;
+    border: 10px groove red;
+  }
+  
+  #screamer-toggle {
+    display: none;
+  }
+  
+  .ugly-button {
+    font-size: 2rem;
+    padding: 15px 30px;
+    background-color: black;
+    color: red;
+    border: 5px solid white;
+    cursor: pointer;
+    transform: rotate(-5deg);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .ugly-button:hover {
+    transform: rotate(20deg) scale(1.1);
+    background: lime;
+  }
+  
+  .screamer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .screamer img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  #screamer-toggle:checked ~ .ugly-button + .screamer {
+    display: flex;
+  }
+  
+  .bonus-container {
+    position: relative;
+  }
+  
+  .bonus-container > .bonus-text:nth-child(1) {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    background-color: orange;
+  }
+  
+  .bonus-container .bonus-text + .bonus-icon {
+    background: red;
+    font-size: 3rem;
+  }
+  
+  .bonus-container .bonus-text ~ .bonus-icon:hover {
+    transform: scale(1.5) rotate(360deg);
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: black;
+    }
+  
+    .toxic {
+      color: hotpink;
+      text-shadow: none;
+      font-size: 1.5rem !important;
+    }
+  
+    .three {
+      background: cyan;
+      border-style: double;
+      transform: rotate(-15deg);
+    }
+  
+    .ugly-button {
+      font-size: 3rem;
+      background: red;
+      color: yellow;
+    }
+  }
+  
+  @keyframes slow-puke {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
